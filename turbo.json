@@ -1,0 +1,45 @@
+{
+    "$schema": "https://turborepo.org/schema.json",
+    "globalDependencies": [
+        "apps/server/*.json",
+        "apps/server/astro.config.ts",
+        "apps/static/*.json",
+        "apps/static/astro.config.ts",
+        "packages/**",
+        "**/.env",
+        "**/package.json"
+    ],
+    "pipeline": {
+        "dev": {
+            "dependsOn": [
+                "dev:static",
+                "^dev"
+            ]
+        },
+        "dev:static": {
+            "inputs": [
+                "apps/static/**"
+            ]
+        },
+        "build": {
+            "dependsOn": [
+                "^build",
+                "build:static"
+            ],
+            "outputs": [
+                "apps/server/dist/**"
+            ],
+            "inputs": [
+                "apps/server/**"
+            ]
+        },
+        "build:static": {
+            "outputs": [
+                "apps/static/dist/**"
+            ],
+            "inputs": [
+                "apps/static/**"
+            ]
+        }
+    }
+}

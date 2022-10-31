@@ -1,0 +1,14 @@
+[
+    {
+        "lang": "de",
+        "slug": "welcome",
+        "title": "Willkommen!",
+        "text": "Hallo, Welt!"
+    },
+    {
+        "lang": "en",
+        "slug": "cv",
+        "title": "CV",
+        "text": "My Resume"
+    }
+]

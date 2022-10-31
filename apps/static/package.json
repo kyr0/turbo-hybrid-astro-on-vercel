@@ -1,0 +1,22 @@
+{
+  "name": "static",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev:static": "astro dev --port 2999",
+    "build:static": "astro build",
+    "lint": "tsc",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "devDependencies": {
+    "@astrojs/react": "^1.2.2",
+    "@types/node": "^18.11.7",
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "astro": "^1.6.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

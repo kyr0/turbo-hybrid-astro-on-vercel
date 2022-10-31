@@ -1,0 +1,23 @@
+{
+  "name": "astro-turborepo-hybrid-setup-ssr-server-and-ssg-static-output-mode-on-vercel",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "yarn turbo run build --concurrency=1 --force",
+    "build:static": "yarn turbo run build:static --concurrency=1 --force",
+    "dev": "yarn turbo run dev"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Aron Homberg",
+    "url": "https://github.com/kyr0"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "devDependencies": {
+    "turbo": "^1.6.2"
+  }
+}

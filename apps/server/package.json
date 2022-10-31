@@ -1,0 +1,30 @@
+{
+  "name": "server",
+  "type": "module",
+  "version": "0.0.1",
+  "packageManager": "yarn@1.22.19",
+  "engines": {
+    "node": "16.x"
+  },
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "postbuild": "cp -R ../static/dist/* .vercel/output/static",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/vercel": "^2.3.2",
+    "@vercel/node": "^2.5.26",
+    "vercel": "^28.4.12"
+  },
+  "devDependencies": {
+    "@astrojs/react": "^1.2.2",
+    "@astrojs/vercel": "^2.3.2",
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "astro": "^1.6.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

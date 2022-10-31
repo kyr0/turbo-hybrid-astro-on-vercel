@@ -1,0 +1,6 @@
+.turbo
+.vscode
+dist
+node_modules
+.astro
+.vercel
