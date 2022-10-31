@@ -12,7 +12,7 @@ export default defineConfig({
   output: 'server', // SSR
   adapter: vercel(),
   vite: {
-    // the staticServe() plugin makes Vite serve all statically pre-generated content in dev
+    // the ssgProxy() plugin makes the dev server Vite serve all statically pre-generated content
     plugins: import.meta.env.DEV ? [ssgProxy('http://127.0.0.1:2999')] : []
   },
   integrations: [react(), multiSitemapSSR()],
