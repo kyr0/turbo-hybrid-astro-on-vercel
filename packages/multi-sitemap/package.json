@@ -1,0 +1,30 @@
+{
+    "name": "multi-sitemap",
+    "version": "0.0.1",
+    "private": true,
+    "type": "module",
+    "description": "Generates a multi-sitemap for SSR and SSG Astro projects combined.",
+    "keywords": [
+        "sitemap"
+    ],
+    "main": "index.ts",
+    "types": "index.ts",
+    "license": "MIT",
+    "author": {
+        "name": "Aron Homberg",
+        "url": "https://github.com/kyr0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kyr0/astro-turborepo-hybrid-setup-ssr-server-and-ssg-static-output-mode-on-vercel.git",
+        "directory": "packages/multi-sitemap"
+    },
+    "devDependencies": {
+        "@astrojs/sitemap": "^1.0.0",
+        "@types/node": "^18.11.8",
+        "astro": "1.6.1"
+    },
+    "exports": {
+        ".": "./index.ts"
+    }
+}
