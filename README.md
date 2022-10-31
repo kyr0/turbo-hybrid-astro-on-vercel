@@ -12,7 +12,7 @@ This repo spike a solution implementation that fully supports this use-case with
 Astro version (1.6.1). I'm contributing this code as a simple reproduction template for
 people who are looking for a solution right now, and also as a proposal to the current discussion.
 
-Proposal for the current discussion: [Spike results]()
+Proposal for the current discussion: [Spike results](https://github.com/kyr0/astro-turborepo-hybrid-setup-ssr-server-and-ssg-static-output-mode-on-vercel#spike-result)
 
 ## Project layout
 
