@@ -6,7 +6,60 @@ import { ShowcaseComponent } from '@packages/client-components'
 
 <Layout description="SSG generated index page" title="Welcome to Hybrid Astro with turborepo!">
   <main>
-    <h1>Welcome to <span class="text-gradient">Hybrid Astro with turborepo!</span></h1>
+    <h1>
+      Welcome to <span class="text-gradient">
+        <a href="https://turbo.build/repo/docs" target="_blank">turbo</a>
+        <a href="https://github.com/withastro/rfcs/pull/362" target="_blank"><i>hybrid</i></a>
+        <a href="https://astro.build" target="_blank">Astro</a> on
+        <a href="https://vercel.com" target="_blank"> Vercel</a>!</span
+      >
+    </h1>
+
+    <p>
+      <a href="https://github.com/withastro/rfcs/pull/362" target="_blank">Currently</a>, Astro
+      doesn't support a <strong><code>hybrid</code></strong> output mode (SSG and SSR pages combined
+      in one project). This
+      <a href="https://github.com/kyr0/turbo-hybrid-astro-on-vercel" target="_blank">
+        template project
+      </a> changes the game:
+    </p><ul>
+      <li>
+        <strong><code>hybrid</code> output</strong> is achieved using two Astro projects in combination
+        (apps/static, apps/server)
+      </li>
+      <li><strong><code>turbo</code></strong> is used to create a monorepo</li>
+      <li>
+        <strong><code>turbo cache</code></strong> is used for <i>local</i> and <i>remote</i> caching
+        (even in CI!)
+      </li>
+      <li>
+        <strong><code>Vercel</code></strong> is pre-configured; clone repo and deploy in 1 min (literally!)
+      </li>
+      <li>
+        <strong><code>React 18</code></strong> is pre-configured for client-components
+      </li>
+      <li>
+        <strong><code>eslint</code></strong> is used for clean code (even for .astro files!)
+      </li>
+      <li>
+        <strong><code>prettier</code></strong> is used to format the code (even for .astro files!)
+      </li>
+      <li>
+        <strong><code>multi-sitemap</code></strong> has been implemented and used to create a unified
+        sitemap
+      </li>
+      <li>
+        <strong>
+          <code>layout</code>,
+          <code>components</code> and
+          <code>client-components</code>
+        </strong> are located in <code>packages/*</code>
+        and can be beautifully imported like: <code>@layouts/*</code>
+      </li>
+    </ul>
+
+    After all, <strong>stellar</strong> developer experience (DX) and
+    <strong>extra performance</strong> has been unlocked.
 
     <p class="instructions">
       This is the static (SSG) index page in <code>apps/static/src/pages/index.astro</code>.
