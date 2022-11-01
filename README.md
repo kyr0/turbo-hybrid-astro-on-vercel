@@ -44,6 +44,9 @@ Shared packages are located in `packages/*`, such as:
 - `packages/client-components`: React components to be used by all Apps
 - `packages/multi-sitemap`: Uses the official `@astrojs/sitemap` integration, but merges the build results of both apps first.
 - `packages/ssg-proxy`: Only used in `dev` mode. Forwards requests to the `apps/static` dev server
+- `packages/tsconfig`: A unified tsconfig that is used in all packages and apps
+- `packages/format`: Prettier configuration for all packages and apps
+- `packages/eslint-config-custom`: Eslint configuration for all packages and apps
 
 ## How it works / behind the scenes
 
