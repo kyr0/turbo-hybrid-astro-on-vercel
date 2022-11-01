@@ -58,16 +58,26 @@ import { ShowcaseComponent } from '@packages/client-components'
       </li>
     </ul>
 
-    After all, <strong>stellar</strong> developer experience (DX) and
-    <strong>extra performance</strong> has been unlocked.
+    <p>
+      <strong>Stellar</strong> developer experience (DX) and
+      <strong>extra performance</strong> can be unlocked, when you use this template as a foundation
+      for your next Astro project.
+    </p>
+
+    <h2>Performance stats</h2>
+    <p>Collected from this very deployment on Vercel:</p>
+    <img src="/build_speed.png" width="100%" />
+    <img src="/desktop_speed.png" width="100%" />
+    <img src="/mobile_speed.png" width="100%" />
+
+    <a
+      href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fturbo-hybrid-astro-on-vercel.vercel.app%2F&hl=EN"
+      >Re-run this test to verify the results</a
+    >
 
     <p class="instructions">
       This is the static (SSG) index page in <code>apps/static/src/pages/index.astro</code>.
     </p>
-
-    <h2>React Component example:</h2>
-
-    <ShowcaseComponent client:visible text="works!" />
 
     <AllLinks />
   </main>
