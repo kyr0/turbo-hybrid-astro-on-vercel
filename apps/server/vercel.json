@@ -1,7 +1,7 @@
 {
-    "framework": "astro",
-    "devCommand": "cd ../.. && yarn dev",
-    "buildCommand": "cd ../.. && yarn build",
-    "installCommand": "yarn --cwd=../.. install --frozen-lockfile",
-    "cleanUrls": true
+  "framework": "astro",
+  "devCommand": "cd ../.. && yarn dev",
+  "buildCommand": "cd ../.. && yarn build",
+  "installCommand": "yarn --cwd=../.. install --frozen-lockfile",
+  "cleanUrls": true
 }

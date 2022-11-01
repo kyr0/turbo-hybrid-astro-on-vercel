@@ -5,21 +5,11 @@
   "compilerOptions": {
     "baseUrl": "../../",
     "paths": {
-      "@client-components/*": [
-        "apps/client-components/*"
-      ],
-      "@components/*": [
-        "apps/components/*"
-      ],
-      "@layouts/*": [
-        "apps/layouts/*"
-      ],
-      "@packages/*": [
-        "packages/*"
-      ]
+      "@client-components/*": ["apps/client-components/*"],
+      "@components/*": ["apps/components/*"],
+      "@layouts/*": ["apps/layouts/*"],
+      "@packages/*": ["packages/*"]
     }
   },
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

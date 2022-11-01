@@ -3,9 +3,5 @@
   "main": "index.js",
   "bin": "bin/format",
   "license": "MIT",
-  "version": "0.0.3",
-  "devDependencies": {
-    "eslint-config-custom": "*",
-    "tsconfig": "*"
-  }
+  "version": "0.0.6"
 }

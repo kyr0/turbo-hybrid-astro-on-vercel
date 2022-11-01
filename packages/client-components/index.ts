@@ -1,1 +1,1 @@
-export { ShowcaseComponent } from "./src/ShowcaseReact"
+export { ShowcaseComponent } from './src/ShowcaseReact'

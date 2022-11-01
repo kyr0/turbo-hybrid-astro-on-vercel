@@ -1,6 +1,6 @@
 # client-components
 
-This package demonstrate how to manage React components on a per-package basis 
+This package demonstrate how to manage React components on a per-package basis
 and use them in your Astro project.
 
 Always define the dependencies of each package directly per-package.
@@ -9,7 +9,7 @@ Always define the dependencies of each package directly per-package.
 
 ### In Astro files
 
-````tsx
+```tsx
 ---
 import { ShowcaseComponent } from "@packages/client-components"
 ---
@@ -17,18 +17,18 @@ import { ShowcaseComponent } from "@packages/client-components"
     Yay
 </ShowcaseComponent>
 
-````
+```
 
 ### From React components
 
-````tsx
-import { ShowcaseComponent } from "@packages/showcase-react"
+```tsx
+import { ShowcaseComponent } from '@packages/showcase-react'
 
 export default function MyReactComponent() {
-    return (
-        <ShowcaseComponent text="Using React components from turporepo packages in Astro works">
-            Yay
-        </ShowcaseComponent>
-    )
+  return (
+    <ShowcaseComponent text="Using React components from turporepo packages in Astro works">
+      Yay
+    </ShowcaseComponent>
+  )
 }
-````
+```

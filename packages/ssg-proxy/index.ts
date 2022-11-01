@@ -1,1 +1,1 @@
-export { ssgProxy } from "./src/ssg-proxy"
+export { ssgProxy } from './src/ssg-proxy'
