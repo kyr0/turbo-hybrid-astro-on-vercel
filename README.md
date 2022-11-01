@@ -61,6 +61,11 @@ The `apps/server` project integrates a custom, tiny integration plugin `packages
 hits the SSG Vite development server, first proxies that request to the SSG Vite dev server. If the response is 200 OK, the response is piped back. This mechanism makes sure that production and development behaviour is the same.
 The performance drawback/overhead isn't impactful in regards to DX.
 
+## Stats
+
+- No cache (Vercel): Builds in 40s
+- With cache (Vercel): FULL TURBO: 6s, one package or app affected: 
+
 ## Spike result
 
 The architecture of this approach for a hybrid Astro setup is debatable.

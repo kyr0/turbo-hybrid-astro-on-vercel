@@ -17,7 +17,7 @@ const randomNumber = Math.random() * 1000
       This is a dynamic (SSR) page in <code>apps/server/src/pages</code>.
     </p>
 
-    <p>
+    <p class="stats">
       <code>
         URL (try query params): {url}<br />
         Some random number: {randomNumber}
@@ -31,3 +31,10 @@ const randomNumber = Math.random() * 1000
     <AllLinks />
   </main>
 </Layout>
+
+<style>
+  .stats {
+    border: 1px dashed #000;
+    padding: 20px;
+  }
+</style>
