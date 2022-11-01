@@ -28,9 +28,9 @@ export function ssgProxy(ssgServerHost: string) {
         if (
           req.method === 'GET' &&
           // skip @fs and @id fetches
-          !req.url!.startsWith('/@') &&
+          !req.url!.startsWith('/@') // &&
           // node_modules requests which might not be part of the SSG project
-          !req.url!.startsWith('/node_modules/.vite')
+          //!req.url!.startsWith('/node_modules/.vite')
         ) {
           try {
             const requestUrl = `http://${ssgServerHost}${req.url}`
