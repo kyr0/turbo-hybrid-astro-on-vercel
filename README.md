@@ -2,8 +2,6 @@
 
 Demo site: TODO
 
-TODO: multi-sitemap
-
 Currently, Astro doesn't support a `hybrid` mode for a Astro projects `output`.
 You can either opt-in for `server` or `static`. Both have their own pro's and con's.
 However, a Next.js-like hybrid project configurable is desirable, as you might want

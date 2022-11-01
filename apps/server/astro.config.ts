@@ -1,6 +1,8 @@
 import { defineConfig } from 'astro/config'
 import vercel from '@astrojs/vercel/serverless'
 import { multiSitemapSSR } from '../../packages/multi-sitemap'
+import { fileURLToPath } from 'url'
+import { dirname } from 'path'
 
 // https://astro.build/config
 import react from '@astrojs/react'
@@ -10,11 +12,15 @@ import { ssgProxy } from '../../packages/ssg-proxy'
 export default defineConfig({
   trailingSlash: 'ignore',
   output: 'server', // SSR
+  site: 'http://localhost:3000',
   adapter: vercel(),
   publicDir: '../../public',
   vite: {
     // the ssgProxy() plugin makes the dev server Vite serve all statically pre-generated content
     plugins: import.meta.env.DEV ? [ssgProxy('http://127.0.0.1:2999')] : [],
   },
-  integrations: [react(), multiSitemapSSR()],
+  integrations: [
+    react(),
+    multiSitemapSSR({ ssgDistPath: `${dirname(fileURLToPath(import.meta.url))}/../static/dist` }),
+  ],
 })

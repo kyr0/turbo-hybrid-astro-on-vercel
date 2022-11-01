@@ -1,18 +1,17 @@
-import type { AstroConfig, AstroIntegration } from 'astro'
+import type { AstroIntegration } from 'astro'
+import { writeFileSync } from 'fs'
+import { fileURLToPath } from 'url'
+import { SSG_SITEMAP_CACHE_FILENAME } from './const'
 
 export const multiSitemapSSG = (): AstroIntegration => {
-  let config: AstroConfig
   return {
     name: 'multi-sitemap-ssg',
     hooks: {
-      'astro:config:done': async ({ config: cfg }) => {
-        config = cfg
-        console.log('[multi-sitemap-ssg] config is done')
-      },
-
       'astro:build:done': async ({ dir, pages }) => {
-        // TODO: save to disk: dist/sitemap.json
-        console.log('[multi-sitemap-ssg] build is done', dir, pages)
+        const ssgDistDir = fileURLToPath(dir)
+        writeFileSync(`${ssgDistDir}/${SSG_SITEMAP_CACHE_FILENAME}`, JSON.stringify(pages), {
+          encoding: 'utf-8',
+        })
       },
     },
   }
