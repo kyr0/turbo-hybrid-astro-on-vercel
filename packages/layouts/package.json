@@ -3,10 +3,12 @@
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint"
+    "lint": "eslint",
+    "format": "*"
   },
   "devDependencies": {
     "eslint-config-custom": "*",
-    "tsconfig": "*"
+    "tsconfig": "*",
+    "format": "*"
   }
 }

@@ -16,7 +16,8 @@
     "url": "https://github.com/kyr0"
   },
   "scripts": {
-    "lint": "eslint"
+    "lint": "eslint",
+    "format": "format"
   },
   "repository": {
     "type": "git",
@@ -27,7 +28,8 @@
     "@types/node": "^18.11.8",
     "vite": "^3.2.2",
     "eslint-config-custom": "*",
-    "tsconfig": "*"
+    "tsconfig": "*",
+    "format": "*"
   },
   "exports": {
     ".": "./index.ts"

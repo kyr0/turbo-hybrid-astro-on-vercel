@@ -11,7 +11,8 @@
   "types": "index.ts",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint"
+    "lint": "eslint",
+    "format": "format"
   },
   "author": {
     "name": "Aron Homberg",
@@ -27,7 +28,8 @@
     "@types/node": "^18.11.8",
     "astro": "1.6.2",
     "eslint-config-custom": "*",
-    "tsconfig": "*"
+    "tsconfig": "*",
+    "format": "*"
   },
   "exports": {
     ".": "./index.ts"

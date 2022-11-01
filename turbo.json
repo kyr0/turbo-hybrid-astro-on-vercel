@@ -1,47 +1,48 @@
 {
-    "$schema": "https://turborepo.org/schema.json",
-    "globalDependencies": [
-        "packages/**",
-        "apps/**/astro.config.ts",
-        "apps/**/astro.config.ts",
-        "apps/**/package.json",
-        "apps/**/tsconfig.json",
-        "**/.env"
-    ],
-    "pipeline": {
-        "dev": {
-            "dependsOn": [
-                "dev:static",
-                "^dev"
-            ]
-        },
-        "dev:static": {
-            "inputs": [
-                "apps/static/**"
-            ]
-        },
-        "build": {
-            "dependsOn": [
-                "^build",
-                "build:static"
-            ],
-            "outputs": [
-                "dist/**",
-                ".vercel/output/**"
-            ],
-            "inputs": [
-                "src/**",
-                "vercel.json"
-            ]
-        },
-        "build:static": {
-            "outputs": [
-                "dist/**"
-            ],
-            "inputs": [
-                "src/**"
-            ]
-        },
-        "lint": {}
-    }
+  "$schema": "https://turborepo.org/schema.json",
+  "globalDependencies": [
+    "packages/**",
+    "apps/**/astro.config.ts",
+    "apps/**/astro.config.ts",
+    "apps/**/package.json",
+    "apps/**/tsconfig.json",
+    "**/.env"
+  ],
+  "pipeline": {
+    "dev": {
+      "dependsOn": [
+        "dev:static",
+        "^dev"
+      ]
+    },
+    "dev:static": {
+      "inputs": [
+        "apps/static/**"
+      ]
+    },
+    "build": {
+      "dependsOn": [
+        "^build",
+        "build:static"
+      ],
+      "outputs": [
+        "dist/**",
+        ".vercel/output/**"
+      ],
+      "inputs": [
+        "src/**",
+        "vercel.json"
+      ]
+    },
+    "build:static": {
+      "outputs": [
+        "dist/**"
+      ],
+      "inputs": [
+        "src/**"
+      ]
+    },
+    "lint": {},
+    "format": {}
+  }
 }

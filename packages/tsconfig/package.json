@@ -2,7 +2,11 @@
   "name": "tsconfig",
   "version": "0.0.1",
   "license": "MIT",
+  "scripts": {
+    "format": "format"
+  },
   "devDependencies": {
-    "astro": "^1.6.2"
+    "astro": "^1.6.2",
+    "format": "*"
   }
 }

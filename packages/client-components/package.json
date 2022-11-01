@@ -8,7 +8,8 @@
   "types": "index.ts",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint"
+    "lint": "eslint",
+    "format": "format"
   },
   "author": {
     "name": "Aron Homberg",
@@ -28,7 +29,8 @@
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "eslint-config-custom": "*",
-    "tsconfig": "*"
+    "tsconfig": "*",
+    "format": "*"
   },
   "exports": {
     ".": "./index.ts"

@@ -1,4 +1,4 @@
-# Welcome to [Hybrid Astro with turbo](https://astro.build)
+# Welcome to [Turbo Hybrid Astro on Vercel](https://astro.build)
 
 Demo site: TODO
 

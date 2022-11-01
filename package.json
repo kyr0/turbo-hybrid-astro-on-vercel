@@ -1,5 +1,5 @@
 {
-  "name": "turbo-hybrid-astro-on-vercel-example",
+  "name": "turbo-hybrid-astro-on-vercel",
   "type": "module",
   "version": "0.0.1",
   "description": "Integrates an SSR and an SSG Astro project into one hybrid Astro app using turbo repo. Deploys to Vercel.",
@@ -8,7 +8,8 @@
     "build": "yarn turbo run build --concurrency=1",
     "build:static": "yarn turbo run build:static --concurrency=1",
     "dev": "yarn turbo run dev",
-    "lint": "yarn turbo run lint"
+    "lint": "yarn turbo run lint",
+    "format": "yarn turbo run format"
   },
   "license": "MIT",
   "author": {
@@ -20,6 +21,8 @@
     "apps/*"
   ],
   "devDependencies": {
-    "turbo": "^1.6.2"
+    "turbo": "^1.6.2",
+    "prettier": "^2.7.1",
+    "prettier-plugin-astro": "^0.5.4"
   }
 }

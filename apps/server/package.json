@@ -12,7 +12,8 @@
     "build": "astro build",
     "postbuild": "cp -R ../static/dist/* .vercel/output/static",
     "astro": "astro",
-    "lint": "eslint"
+    "lint": "eslint",
+    "format": "format"
   },
   "dependencies": {
     "@astrojs/vercel": "^2.3.2",
@@ -28,6 +29,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "eslint-config-custom": "*",
-    "tsconfig": "*"
+    "tsconfig": "*",
+    "format": "*"
   }
 }
