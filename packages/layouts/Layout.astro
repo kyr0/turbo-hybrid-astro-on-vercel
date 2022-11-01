@@ -1,12 +1,13 @@
 ---
 export interface Props {
-	title: string
-	description: string
-	lang?: string
+	title: string;
+	description: string;
+	lang?: string;
 }
 
 const { title, description, lang = "en" } = Astro.props;
 ---
+
 <!DOCTYPE html>
 <html lang={lang}>
 	<head>
@@ -19,19 +20,24 @@ const { title, description, lang = "en" } = Astro.props;
 	</head>
 	<body>
 		<slot />
+		<style is:global>
+			:root {
+				--accent: 124, 58, 237;
+				--accent-gradient: linear-gradient(
+					45deg,
+					rgb(var(--accent)),
+					#da62c4 30%,
+					white 60%
+				);
+			}
+			html {
+				font-family: system-ui, sans-serif;
+				background-color: #f6f6f6;
+			}
+			code {
+				font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+					DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+			}
+		</style>
 	</body>
 </html>
-<style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-</style>
