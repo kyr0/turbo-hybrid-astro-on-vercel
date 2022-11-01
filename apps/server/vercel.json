@@ -3,6 +3,6 @@
   "devCommand": "cd ../.. && yarn dev",
   "buildCommand": "cd ../.. && yarn build",
   "installCommand": "yarn --cwd=../.. install --frozen-lockfile",
-  "ignoreCommand": "echo 'Never ignore'",
+  "ignoreCommand": "exit 1",
   "cleanUrls": true
 }
