@@ -2,7 +2,6 @@
 
 Demo site: TODO
 
-TODO: shared public folder
 TODO: multi-sitemap
 TODO: demo for API Request in SSR and using query params
 TODO: remove all .DS_Store...

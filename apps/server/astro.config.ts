@@ -11,6 +11,7 @@ export default defineConfig({
   trailingSlash: 'ignore',
   output: 'server', // SSR
   adapter: vercel(),
+  publicDir: '../../public',
   vite: {
     // the ssgProxy() plugin makes the dev server Vite serve all statically pre-generated content
     plugins: import.meta.env.DEV ? [ssgProxy('http://127.0.0.1:2999')] : [],

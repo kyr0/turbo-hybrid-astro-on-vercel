@@ -8,5 +8,6 @@ import react from '@astrojs/react'
 export default defineConfig({
   trailingSlash: 'ignore',
   output: 'static',
+  publicDir: '../../public',
   integrations: [react(), multiSitemapSSG()],
 })

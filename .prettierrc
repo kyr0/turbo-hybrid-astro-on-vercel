@@ -8,17 +8,6 @@
   "overrides": [
     {
       "files": [
-        ".*",
-        "*.json",
-        "*.md",
-        "*.yml"
-      ],
-      "options": {
-        "useTabs": false
-      }
-    },
-    {
-      "files": [
         "**/*.astro"
       ],
       "options": {

@@ -3,6 +3,7 @@
   "extends": "astro/tsconfigs/base",
   "display": "Default",
   "compilerOptions": {
+    "types": ["astro/client"],
     "baseUrl": "../../",
     "paths": {
       "@client-components/*": ["apps/client-components/*"],
