@@ -30,7 +30,7 @@ I've also decided to activate [Remote Caching](https://turbo.build/repo/docs/cor
 
 ### Apps
 
-There are two `apps`, one for SSG, the other for SSR. SSG / `server` is primarily deployed to Vercel.
+There are two `apps`, one for SSG, the other for SSR. SSR / `server` is primarily deployed to Vercel.
 
 - `apps/server`: SSR / `server` output Astro project. Renders the dynamic pages.
 - `apps/static`: SSG / `static` output Astro project. Renders all static pages and resources to `apps/static/dist`
