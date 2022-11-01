@@ -1,8 +1,12 @@
 {
-    "name": "components",
-    "version": "0.0.1",
-    "license": "MIT",
-    "scripts": {
-        "lint": "eslint"
-    }
+  "name": "components",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint"
+  },
+  "devDependencies": {
+    "eslint-config-custom": "*",
+    "tsconfig": "*"
+  }
 }

@@ -2,6 +2,7 @@
   "name": "eslint-config-custom",
   "main": "index.js",
   "version": "0.0.1",
+  "license": "MIT",
   "scripts": {
     "lint": "eslint"
   },
@@ -13,6 +14,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-turbo": "^0.0.4",
     "eslint-plugin-solid": "^0.7.4",
-    "typescript": "^4.8.4"
+    "typescript": "^4.8.4",
+    "tsconfig": "*"
   }
 }

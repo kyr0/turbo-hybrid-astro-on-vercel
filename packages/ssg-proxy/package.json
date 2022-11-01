@@ -1,34 +1,35 @@
 {
-    "name": "ssg-proxy",
-    "version": "0.0.1",
-    "private": true,
-    "type": "module",
-    "description": "Answers with the SSG static file responses when they are availabe; just as the hosting behaviour would be.",
-    "keywords": [
-        "vite plugin",
-        "SSG proxy"
-    ],
-    "main": "index.ts",
-    "types": "index.ts",
-    "license": "MIT",
-    "author": {
-        "name": "Aron Homberg",
-        "url": "https://github.com/kyr0"
-    },
-    "scripts": {
-        "lint": "eslint"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/kyr0/astro-turborepo-hybrid-setup-ssr-server-and-ssg-static-output-mode-on-vercel.git",
-        "directory": "packages/ssg-proxy"
-    },
-    "devDependencies": {
-        "@types/node": "^18.11.8",
-        "vite": "^3.2.2",
-        "eslint-config-custom": "*"
-    },
-    "exports": {
-        ".": "./index.ts"
-    }
+  "name": "ssg-proxy",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Answers with the SSG static file responses when they are availabe; just as the hosting behaviour would be.",
+  "keywords": [
+    "vite plugin",
+    "SSG proxy"
+  ],
+  "main": "index.ts",
+  "types": "index.ts",
+  "license": "MIT",
+  "author": {
+    "name": "Aron Homberg",
+    "url": "https://github.com/kyr0"
+  },
+  "scripts": {
+    "lint": "eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kyr0/astro-turborepo-hybrid-setup-ssr-server-and-ssg-static-output-mode-on-vercel.git",
+    "directory": "packages/ssg-proxy"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.8",
+    "vite": "^3.2.2",
+    "eslint-config-custom": "*",
+    "tsconfig": "*"
+  },
+  "exports": {
+    ".": "./index.ts"
+  }
 }
