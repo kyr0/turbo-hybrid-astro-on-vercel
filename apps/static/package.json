@@ -6,7 +6,7 @@
   "scripts": {
     "dev:static": "astro dev --port 2999",
     "build:static": "astro build",
-    "lint": "tsc",
+    "lint": "eslint",
     "preview": "astro preview",
     "astro": "astro"
   },

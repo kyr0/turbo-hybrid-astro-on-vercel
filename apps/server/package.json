@@ -11,7 +11,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "postbuild": "cp -R ../static/dist/* .vercel/output/static",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "eslint"
   },
   "dependencies": {
     "@astrojs/vercel": "^2.3.2",

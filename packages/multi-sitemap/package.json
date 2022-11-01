@@ -10,6 +10,9 @@
     "main": "index.ts",
     "types": "index.ts",
     "license": "MIT",
+    "scripts": {
+        "lint": "eslint"
+    },
     "author": {
         "name": "Aron Homberg",
         "url": "https://github.com/kyr0"

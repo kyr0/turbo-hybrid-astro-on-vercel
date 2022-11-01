@@ -1,13 +1,12 @@
 {
     "$schema": "https://turborepo.org/schema.json",
     "globalDependencies": [
-        "apps/server/*.json",
-        "apps/server/astro.config.ts",
-        "apps/static/*.json",
-        "apps/static/astro.config.ts",
         "packages/**",
-        "**/.env",
-        "**/package.json"
+        "apps/**/astro.config.ts",
+        "apps/**/astro.config.ts",
+        "apps/**/package.json",
+        "apps/**/tsconfig.json",
+        "**/.env"
     ],
     "pipeline": {
         "dev": {
@@ -27,19 +26,22 @@
                 "build:static"
             ],
             "outputs": [
-                "apps/server/dist/**"
+                "dist/**",
+                ".vercel/output/**"
             ],
             "inputs": [
-                "apps/server/**"
+                "src/**",
+                "vercel.json"
             ]
         },
         "build:static": {
             "outputs": [
-                "apps/static/dist/**"
+                "dist/**"
             ],
             "inputs": [
-                "apps/static/**"
+                "src/**"
             ]
-        }
+        },
+        "lint": {}
     }
 }
