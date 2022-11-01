@@ -1,0 +1,24 @@
+---
+import Card from './Card.astro'
+---
+
+<h2>These are all pages available (SSR + SSG):</h2>
+
+<ul role="list" class="link-card-grid">
+  <Card href="/" title="Homepage" body="Homepage (SSG)" />
+  <Card href="/welcome" title="Welcome page" body="Welcome page (getStaticPaths(); SSG)" />
+  <Card href="/cv" title="CV page" body="Resume page (getStaticPaths(); SSG)" />
+  <Card href="/dynamic" title="Dynamic page" body="SSR rendered page, uses query params (SSR)" />
+  <Card
+    href="/api/admin-login?username=admin&password=test123"
+    title="Admin login API endpoint"
+    target="_blank"
+    body="API endpoint, uses env vars, returns JSON. Play with the query params."
+  />
+  <Card
+    href="/data/cv.json"
+    target="_blank"
+    title="Static API endpoint"
+    body="Statically pre-generated data output. API endpoint, using getStaticPaths()."
+  />
+</ul>

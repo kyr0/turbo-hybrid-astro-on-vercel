@@ -2,6 +2,8 @@
 
 Demo site: TODO
 
+TODO: HMR connect per page type, not all to SSR (currently SSG pages have no HMR)
+
 Currently, Astro doesn't support a `hybrid` mode for a Astro projects `output`.
 You can either opt-in for `server` or `static`. Both have their own pro's and con's.
 However, a Next.js-like hybrid project configurable is desirable, as you might want

@@ -15,8 +15,6 @@ export function ShowcaseComponent({ text, children }: ShowcaseComponentProps) {
       <p>
         Packages can also use .env: {envCanBeUsedInPackages}
       </p>
-      Children:
-      {children}
     </>
   )
 }
