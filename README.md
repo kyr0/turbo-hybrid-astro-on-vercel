@@ -4,7 +4,6 @@ Demo site: TODO
 
 TODO: multi-sitemap
 TODO: demo for API Request in SSR and using query params
-TODO: remove all .DS_Store...
 
 Currently, Astro doesn't support a `hybrid` mode for a Astro projects `output`.
 You can either opt-in for `server` or `static`. Both have their own pro's and con's.
