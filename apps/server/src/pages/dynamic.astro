@@ -1,7 +1,13 @@
 ---
 import Layout from '@packages/layouts/Layout.astro'
 import Card from '@packages/components/Card.astro'
+import { Debug } from 'astro/components'
 import { ShowcaseComponent } from '@packages/client-components'
+// see: https://docs.astro.build/en/guides/server-side-rendering/#features
+// -> this gets executed as a Vercel Function (locally: Node.js) to return a dynamic SSR response
+
+const url = Astro.request.url
+const randomNumber = Math.random() * 1000
 ---
 
 <Layout description="SSR generated page" title="Welcome to Hybrid Astro with turborepo!">
@@ -11,6 +17,9 @@ import { ShowcaseComponent } from '@packages/client-components'
     <p class="instructions">
       This is a dynamic (SSR) page in <code>apps/server/src/pages</code>.
     </p>
+
+    URL: {url}
+    Random: {randomNumber}
 
     <h4>Here is a demo of a React component integrated:</h4>
 

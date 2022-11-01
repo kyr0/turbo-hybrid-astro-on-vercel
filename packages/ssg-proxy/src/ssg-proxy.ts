@@ -24,18 +24,16 @@ export function ssgProxy(ssgBaseUrl: string) {
           // skip @fs and @id fetches
           !req.url!.startsWith('/@') &&
           // node_modules requests which might not be part of the SSG project
-          !req.url!.startsWith('/node_modules/.vite') &&
-          // skip filesystem .astro code fetches
-          !(req.url!.indexOf('.astro?astro') > -1)
+          !req.url!.startsWith('/node_modules/.vite')
         ) {
           try {
             const requestUrl = `${ssgBaseUrl}${req.url}`
             const result = await requestFile(requestUrl)
 
             if (result.statusCode === 200) {
-              console.log('[ssg-proxy] answering static reqest for file:', requestUrl)
-
+              // console.log('[ssg-proxy] answering static reqest for file:', requestUrl)
               // high-performance stream piping the SSG response
+
               result.pipe(res)
             } else {
               next()

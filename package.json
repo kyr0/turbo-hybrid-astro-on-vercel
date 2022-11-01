@@ -5,11 +5,11 @@
   "description": "Integrates an SSR and an SSG Astro project into one hybrid Astro app using turbo repo. Deploys to Vercel.",
   "private": true,
   "scripts": {
-    "build": "yarn turbo run build --concurrency=1",
-    "build:static": "yarn turbo run build:static --concurrency=1",
-    "dev": "yarn turbo run dev",
-    "lint": "yarn turbo run lint",
-    "format": "yarn turbo run format"
+    "build": "dotenv yarn turbo run build --concurrency=1",
+    "build:static": "dotenv yarn turbo run build:static --concurrency=1",
+    "dev": "dotenv yarn turbo run dev",
+    "lint": "dotenv yarn turbo run lint",
+    "format": "dotenv yarn turbo run format"
   },
   "license": "MIT",
   "author": {
@@ -22,6 +22,7 @@
   ],
   "devDependencies": {
     "turbo": "^1.6.2",
+    "dotenv-cli": "^6.0.0",
     "prettier": "^2.7.1",
     "prettier-plugin-astro": "^0.5.4"
   }
