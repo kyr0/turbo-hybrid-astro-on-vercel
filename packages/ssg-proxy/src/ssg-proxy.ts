@@ -1,7 +1,8 @@
-import type { ViteDevServer } from 'vite'
+import type { ViteDevServer, Plugin } from 'vite'
 import { IncomingMessage, ServerResponse } from 'http'
 import { get } from 'http'
 
+/** requests a file from SSG Vite server and returns its IncomingMessage stream Promise */
 async function requestFile(url: string) {
   return new Promise<IncomingMessage>((resolve, reject) => {
     try {
@@ -14,7 +15,12 @@ async function requestFile(url: string) {
 
 // proxy requests that hit the SSR dev server first to SSG pre-generated files first,
 // just as if they were served by the CDN on the hosting platform
-export function ssgProxy(ssgBaseUrl: string) {
+export function ssgProxy(ssgServerHost: string) {
+  // only active in dev
+  if (!import.meta.env.DEV) {
+    return
+  }
+
   return {
     name: 'ssg-proxy',
     configureServer(server: ViteDevServer) {
@@ -27,7 +33,7 @@ export function ssgProxy(ssgBaseUrl: string) {
           !req.url!.startsWith('/node_modules/.vite')
         ) {
           try {
-            const requestUrl = `${ssgBaseUrl}${req.url}`
+            const requestUrl = `http://${ssgServerHost}${req.url}`
             const result = await requestFile(requestUrl)
 
             if (result.statusCode === 200) {
@@ -46,5 +52,22 @@ export function ssgProxy(ssgBaseUrl: string) {
         }
       })
     },
-  }
+
+    transform(code, id, opts = {}) {
+      if (opts.ssr) return
+
+      if (id.indexOf('client.mjs') > -1) {
+        code = code.replace(
+          "const socket = new WebSocket(`${protocol}://${hostAndPath}`, 'vite-hmr');",
+          // monkey-patching the client lib to make sure we have both HMR WS servers connected
+          `const socket = new WebSocket(\`\${protocol}://\${hostAndPath}\`, 'vite-hmr');
+          const ssgSocket = new WebSocket(\`\${protocol}://${ssgServerHost}\`, 'vite-hmr');
+          ssgSocket.addEventListener('message', async ({ data }) => {
+            handleMessage(JSON.parse(data));
+          });`
+        )
+      }
+      return code
+    },
+  } as Plugin
 }

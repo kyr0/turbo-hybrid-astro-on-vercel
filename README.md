@@ -2,8 +2,6 @@
 
 Demo site: https://turbo-hybrid-astro-on-vercel.vercel.app/
 
-TODO: HMR connect per page type, not all to SSR (currently SSG pages have no HMR)
-
 Currently, Astro doesn't support a `hybrid` mode for a Astro projects `output`.
 You can either opt-in for `server` or `static`. Both have their own pro's and con's.
 However, a Next.js-like hybrid project configurable is desirable, as you might want
@@ -58,8 +56,10 @@ This process makes sure that even though Vercel primarily serves the `apps/serve
 ### In development
 
 The `apps/server` project integrates a custom, tiny integration plugin `packages/ssg-proxy`, that, when a request
-hits the SSG Vite development server, first proxies that request to the SSG Vite dev server. If the response is 200 OK, the response is piped back. This mechanism makes sure that production and development behaviour is the same.
-The performance drawback/overhead isn't impactful in regards to DX.
+hits the SSG Vite development server, first proxies that request to the SSG Vite dev server. If the response is 200 OK, the response is piped back. This mechanism makes sure that production and development behaviour is the same. 
+
+For HMR, the same approach as the internal Astro Vite plugin impl. has been used in it's `transform()` method.
+The original client lib code is simply monkey-patched to connect to and receive updates from both HMR servers.
 
 ## Stats
 

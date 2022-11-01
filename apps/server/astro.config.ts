@@ -8,6 +8,8 @@ import { dirname } from 'path'
 import react from '@astrojs/react'
 import { ssgProxy } from '../../packages/ssg-proxy'
 
+const pathOfThisFile = fileURLToPath(import.meta.url)
+
 // https://astro.build/config
 export default defineConfig({
   trailingSlash: 'ignore',
@@ -17,10 +19,10 @@ export default defineConfig({
   publicDir: '../../public',
   vite: {
     // the ssgProxy() plugin makes the dev server Vite serve all statically pre-generated content
-    plugins: import.meta.env.DEV ? [ssgProxy('http://127.0.0.1:2999')] : [],
+    plugins: [ssgProxy('127.0.0.1:2999')],
   },
   integrations: [
     react(),
-    multiSitemapSSR({ ssgDistPath: `${dirname(fileURLToPath(import.meta.url))}/../static/dist` }),
+    multiSitemapSSR({ ssgDistPath: `${dirname(pathOfThisFile)}/../static/dist` }),
   ],
 })
