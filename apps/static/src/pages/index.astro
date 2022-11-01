@@ -1,7 +1,6 @@
 ---
 import Layout from '@packages/layouts/Layout.astro'
 import AllLinks from '@packages/components/src/AllLinks.astro'
-import { ShowcaseComponent } from '@packages/client-components'
 ---
 
 <Layout description="SSG generated index page" title="Welcome to Hybrid Astro with turborepo!">
@@ -74,9 +73,28 @@ import { ShowcaseComponent } from '@packages/client-components'
 
     <h2>Performance stats</h2>
     <p>Collected from this very deployment on Vercel:</p>
-    <img src="/build_speed.png" width="100%" alt="Amazing build speed on Vercel" />
-    <img src="/desktop_speed.png" width="100%" alt="100% desktop speed in web.dev speed test" />
-    <img src="/mobile_speed.png" width="100%" alt="100% mobile speed in web.dev speed test" />
+
+    <img
+      class="perf_image"
+      src="/build_speed.png"
+      width="800"
+      height="87"
+      alt="Amazing build speed on Vercel"
+    />
+    <img
+      class="perf_image"
+      src="/desktop_speed.png"
+      width="800"
+      height="698"
+      alt="100% desktop speed in web.dev speed test"
+    />
+    <img
+      class="perf_image"
+      src="/mobile_speed.png"
+      width="800"
+      height="702"
+      alt="100% mobile speed in web.dev speed test"
+    />
 
     <a
       href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fturbo-hybrid-astro-on-vercel.vercel.app%2F&hl=EN"
@@ -90,3 +108,10 @@ import { ShowcaseComponent } from '@packages/client-components'
     <AllLinks />
   </main>
 </Layout>
+
+<style>
+  .perf_image {
+    object-fit: contain;
+    width: 100%;
+  }
+</style>
