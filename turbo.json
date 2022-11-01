@@ -6,7 +6,8 @@
     "apps/**/astro.config.ts",
     "apps/**/package.json",
     "apps/**/tsconfig.json",
-    "**/.env"
+    "**/.env",
+    "public/**"
   ],
   "pipeline": {
     "dev": {
