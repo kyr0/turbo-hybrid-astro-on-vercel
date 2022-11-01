@@ -17,7 +17,7 @@
     },
     "dev:static": {
       "inputs": [
-        "apps/static/**"
+        "src/**"
       ]
     },
     "build": {
