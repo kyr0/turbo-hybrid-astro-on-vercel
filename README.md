@@ -64,7 +64,10 @@ The performance drawback/overhead isn't impactful in regards to DX.
 ## Stats
 
 - No cache (Vercel): Builds in 40s
-- With cache (Vercel): FULL TURBO: 6s, one package or app affected: 
+- With cache (Vercel): FULL TURBO: 6s, one package or app affected: 34s (of which 24s is `yarn install`...)
+- Locally, full build: 5.05s (on a Apple M1 Max machine/2021)
+
+# 
 
 ## Spike result
 
