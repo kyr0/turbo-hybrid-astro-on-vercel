@@ -3,7 +3,6 @@
   "globalDependencies": [
     "packages/**",
     "apps/**/astro.config.ts",
-    "apps/**/astro.config.ts",
     "apps/**/package.json",
     "apps/**/tsconfig.json",
     "**/.env",
@@ -12,19 +11,12 @@
   "pipeline": {
     "dev": {
       "dependsOn": [
-        "dev:static",
         "^dev"
-      ]
-    },
-    "dev:static": {
-      "inputs": [
-        "src/**"
       ]
     },
     "build": {
       "dependsOn": [
-        "^build",
-        "build:static"
+        "^build"
       ],
       "outputs": [
         "dist/**",
@@ -33,14 +25,6 @@
       "inputs": [
         "src/**",
         "vercel.json"
-      ]
-    },
-    "build:static": {
-      "outputs": [
-        "dist/**"
-      ],
-      "inputs": [
-        "src/**"
       ]
     },
     "lint": {},

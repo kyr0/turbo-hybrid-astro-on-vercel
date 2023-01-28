@@ -1,9 +1,11 @@
 ---
 import Layout from '@packages/layouts/Layout.astro'
-import { ShowcaseComponent } from '@packages/client-components'
+import { ShowcasePreact } from '@packages/preact-components'
 import { Page } from '../model/Page'
 import PageData from '../data/pages.json'
-import AllLinks from '@packages/components/src/AllLinks.astro'
+import AllLinks from '../components/AllLinks.astro'
+
+export const prerender = true
 
 export async function getStaticPaths() {
   const pages: Array<Page> = PageData
@@ -22,8 +24,8 @@ const { slug } = Astro.props
     <h1><span class="text-gradient">/{slug}</span></h1>
 
     <p class="instructions">
-      This is a static (SSG) page. It has been pre-generated dynamically. Code: <code
-        >apps/static/src/pages/[...slug].astro</code
+      This is a static (SSG) page. It has been prerendered dynamically. Code: <code
+        >apps/server/src/pages/[...slug].astro</code
       >.
     </p>
 
@@ -35,7 +37,7 @@ const { slug } = Astro.props
 
     <h2>React Component example:</h2>
 
-    <ShowcaseComponent client:visible text="works!" />
+    <ShowcasePreact client:visible text="works!" />
 
     <AllLinks />
   </main>

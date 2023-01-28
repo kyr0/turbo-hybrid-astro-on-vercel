@@ -3,14 +3,17 @@
   "extends": "astro/tsconfigs/base",
   "display": "Default",
   "compilerOptions": {
-    "types": ["astro/client"],
+    "types": [
+      "@astrojs/image/client"
+    ],
     "baseUrl": "../../",
     "paths": {
-      "@client-components/*": ["apps/client-components/*"],
-      "@components/*": ["apps/components/*"],
-      "@layouts/*": ["apps/layouts/*"],
-      "@packages/*": ["packages/*"]
+      "@packages/*": [
+        "packages/*"
+      ]
     }
   },
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

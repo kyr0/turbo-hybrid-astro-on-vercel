@@ -6,7 +6,6 @@
     "format": "format"
   },
   "devDependencies": {
-    "astro": "^1.6.2",
     "format": "*"
   }
 }

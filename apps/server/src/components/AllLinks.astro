@@ -1,5 +1,5 @@
 ---
-import Card from './Card.astro'
+import Card from '@packages/astro-components/src/Card.astro'
 ---
 
 <h2>Tech demo pages (SSR, SSG)</h2>
@@ -18,7 +18,7 @@ import Card from './Card.astro'
   <Card
     href="/data/cv.json"
     target="_blank"
-    title="Static API endpoint"
+    title="Static API endpoint (SSG)"
     body="Statically pre-generated data output. API endpoint, using getStaticPaths()."
   />
 </ul>

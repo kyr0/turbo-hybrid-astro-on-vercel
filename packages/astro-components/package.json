@@ -1,6 +1,7 @@
 {
-  "name": "components",
+  "name": "astro-components",
   "version": "0.0.1",
+  "description": "This package contains a Astro components to use in Astro apps.",
   "license": "MIT",
   "scripts": {
     "lint": "eslint",

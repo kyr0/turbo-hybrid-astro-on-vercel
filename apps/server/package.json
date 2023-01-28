@@ -4,30 +4,27 @@
   "version": "0.0.1",
   "packageManager": "yarn@1.22.19",
   "engines": {
-    "node": "16.x"
+    "node": ">=16.x"
   },
   "private": true,
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "postbuild": "cp -R ../static/dist/* .vercel/output/static",
     "astro": "astro",
     "lint": "eslint",
     "format": "format"
   },
   "dependencies": {
-    "@astrojs/vercel": "^2.3.2",
-    "@vercel/node": "^2.5.26",
-    "vercel": "^28.4.12"
+    "@astrojs/preact": "^2.0.0",
+    "@astrojs/vercel": "^3.0.0",
+    "@astrojs/sitemap": "^1.0.0",
+    "@vercel/node": "^2.8.16",
+    "astrojs-service-worker": "^0.0.9",
+    "astro": "^2.0.2",
+    "preact": "^10.11.3",
+    "vercel": "^28.14.0"
   },
   "devDependencies": {
-    "@astrojs/react": "^1.2.2",
-    "@astrojs/vercel": "^2.3.2",
-    "@types/react": "^18.0.24",
-    "@types/react-dom": "^18.0.8",
-    "astro": "^1.6.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "eslint-config-custom": "*",
     "tsconfig": "*",
     "format": "*"

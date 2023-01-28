@@ -1,9 +1,9 @@
 {
-  "name": "client-components",
+  "name": "preact-components",
   "version": "0.0.1",
   "private": true,
   "type": "module",
-  "description": "This package contains a React component to use in Astro projects.",
+  "description": "This package contains a Preact components to use in Astro apps.",
   "main": "index.ts",
   "types": "index.ts",
   "license": "MIT",
@@ -18,16 +18,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/kyr0/astro-turborepo-hybrid-setup-ssr-server-and-ssg-static-output-mode-on-vercel.git",
-    "directory": "packages/react-tsx-example"
-  },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "directory": "packages/client-components"
   },
   "devDependencies": {
-    "astro": "^1.6.2",
-    "@types/react": "^18.0.24",
-    "@types/react-dom": "^18.0.8",
     "eslint-config-custom": "*",
     "tsconfig": "*",
     "format": "*"

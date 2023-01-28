@@ -1,6 +1,8 @@
 import { APIRoute } from 'astro'
 import pagesData from '../../data/pages.json'
 
+export const prerender = true
+
 // Static API endpoint:
 // e.g. GET /data/cv.json
 // e.g. GET /data/welcome.json

@@ -1,28 +1,22 @@
 import { defineConfig } from 'astro/config'
+
+// alternatively, use '@astrojs/vercel/edge'
 import vercel from '@astrojs/vercel/serverless'
-import { multiSitemapSSR } from '../../packages/multi-sitemap'
-import { fileURLToPath } from 'url'
-import { dirname } from 'path'
+import preact from '@astrojs/preact'
+import sitemap from '@astrojs/sitemap'
+import serviceWorker from 'astrojs-service-worker'
 
 // https://astro.build/config
-import react from '@astrojs/react'
-import { ssgProxy } from '../../packages/ssg-proxy'
-
-const pathOfThisFile = fileURLToPath(import.meta.url)
 
 // https://astro.build/config
 export default defineConfig({
   trailingSlash: 'ignore',
-  output: 'server', // SSR
-  site: 'http://localhost:3000',
+  output: 'server',
+  site: 'http://localhost:3000/',
   adapter: vercel(),
   publicDir: '../../public',
   vite: {
-    // the ssgProxy() plugin makes the dev server Vite serve all statically pre-generated content
-    plugins: [ssgProxy('127.0.0.1:2999')],
+    base: './',
   },
-  integrations: [
-    react(),
-    multiSitemapSSR({ ssgDistPath: `${dirname(pathOfThisFile)}/../static/dist` }),
-  ],
+  integrations: [preact({ compat: true }), sitemap(), serviceWorker()],
 })

@@ -1,7 +1,7 @@
 ---
 import Layout from '@packages/layouts/Layout.astro'
-import AllLinks from '@packages/components/src/AllLinks.astro'
-import { ShowcaseComponent } from '@packages/client-components'
+import AllLinks from '../components/AllLinks.astro'
+import { ShowcasePreact } from '@packages/preact-components'
 // see: https://docs.astro.build/en/guides/server-side-rendering/#features
 // -> this gets executed as a Vercel Function (locally: Node.js) to return a dynamic SSR response
 
@@ -14,7 +14,7 @@ const randomNumber = Math.random() * 1000
     <h1><span class="text-gradient">Dynamic, SSR page</span></h1>
 
     <p class="instructions">
-      This is a dynamic (SSR) page in <code>apps/server/src/pages</code>.
+      This is a dynamic (SSR) page in <code>apps/server/src/pages/dynamic.astro</code>.
     </p>
 
     <p class="stats">
@@ -24,9 +24,9 @@ const randomNumber = Math.random() * 1000
       </code>
     </p>
 
-    <h2>React Component example:</h2>
+    <h2>Preact Component example:</h2>
 
-    <ShowcaseComponent client:visible text="works!" />
+    <ShowcasePreact client:visible text="works!" />
 
     <AllLinks />
   </main>
