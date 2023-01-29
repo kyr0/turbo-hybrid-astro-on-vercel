@@ -4,5 +4,8 @@
   "buildCommand": "cd ../.. && yarn build",
   "installCommand": "yarn --cwd=../.. install --frozen-lockfile",
   "ignoreCommand": "exit 1",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "regions": [
+    "fra1"
+  ]
 }
