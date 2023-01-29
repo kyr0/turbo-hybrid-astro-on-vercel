@@ -10,12 +10,8 @@ export interface ShowcasePreactProps {
 export function ShowcasePreact({ text, children }: RenderableProps<ShowcasePreactProps>) {
   return (
     <>
-      <p>
-        ShowcaseComponent (Preact) from packages/preact-components: {text}
-      </p>
-      <p>
-        Packages can also use .env: {envCanBeUsedInPackages}
-      </p>
+      <p>ShowcaseComponent (Preact) from packages/preact-components: {text}</p>
+      <p>Packages can also use .env: {envCanBeUsedInPackages}</p>
     </>
   )
 }

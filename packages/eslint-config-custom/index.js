@@ -24,8 +24,7 @@ module.exports = {
     {
       files: ['*.tsx'],
       parser: '@typescript-eslint/parser',
-      plugins: ['solid'],
-      extends: ['eslint:recommended', 'plugin:solid/typescript'],
+      extends: ['eslint:recommended'],
     },
     {
       files: ['*.ts'],

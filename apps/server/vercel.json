@@ -5,7 +5,5 @@
   "installCommand": "yarn --cwd=../.. install --frozen-lockfile",
   "ignoreCommand": "exit 1",
   "cleanUrls": true,
-  "regions": [
-    "fra1"
-  ]
+  "regions": ["fra1"]
 }
