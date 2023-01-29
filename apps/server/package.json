@@ -16,17 +16,21 @@
   },
   "dependencies": {
     "@astrojs/preact": "^2.0.0",
-    "@astrojs/vercel": "^3.0.0",
     "@astrojs/sitemap": "^1.0.0",
+    "@astrojs/vercel": "^3.0.0",
+    "@astrojs/image": "^0.13.0",
     "@vercel/node": "^2.8.16",
-    "astrojs-service-worker": "^0.0.9",
     "astro": "^2.0.2",
+    "astro-robots-txt": "^0.3.11",
+    "astro-sitemap": "^0.4.2",
+    "astro-webmanifest": "^0.4.3",
+    "astrojs-service-worker": "^0.0.9",
     "preact": "^10.11.3",
     "vercel": "^28.14.0"
   },
   "devDependencies": {
     "eslint-config-custom": "*",
-    "tsconfig": "*",
-    "format": "*"
+    "format": "*",
+    "tsconfig": "*"
   }
 }

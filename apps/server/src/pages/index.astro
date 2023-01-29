@@ -1,6 +1,7 @@
 ---
 import Layout from '@packages/layouts/Layout.astro'
 import AllLinks from '../components/AllLinks.astro'
+import { Image } from '@astrojs/image/components'
 
 export const prerender = true
 ---
@@ -43,8 +44,9 @@ export const prerender = true
         >, read the docs to simply integrate any other supported framework.
       </li>
       <li>
-        <strong><code>service-worker.js</code></strong> using Workbox is integrated for caching static
-        resources and offline reading support.
+        <strong><code>astrojs-serivce-worker</code></strong> to generate a <code
+          >service-worker.js</code
+        > using WorkBox is integrated for caching static resources and offline reading support.
       </li>
       <li>
         <strong><code>eslint</code></strong> is used for clean code (even for .astro files!)
@@ -53,7 +55,19 @@ export const prerender = true
         <strong><code>prettier</code></strong> is used to format the code (even for .astro files!)
       </li>
       <li>
-        <strong><code>@astrojs/sitemap</code></strong> is enabled
+        <strong><code>astro-sitemap</code></strong> is used for custom sitemap generation
+      </li>
+      <li>
+        <strong><code>@astrojs/image</code></strong> for image optimization using <code>sharp</code>
+      </li>
+      <li>
+        <strong><code>astro-robots-txt</code></strong> for custom <code>robots.txt</code> generation
+      </li>
+      <li>
+        <strong><code>astro-webmanifest</code></strong> for custom and seamless <code
+          >manifest.webmanifest</code
+        >
+        PWA support; generates all necessary icons on-the-fly using <code>sharp</code>
       </li>
       <li>
         <strong>
@@ -133,6 +147,19 @@ export const prerender = true
       </p>
 
       <AllLinks />
+
+      <p>
+        Testing <code>@astrojs/image</code>:
+      </p>
+
+      <Image
+        src="https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3071&q=80"
+        width={300}
+        height={200}
+        quality={80}
+        aspectRatio="4:3"
+        alt="Foxes on a meadow"
+      />
     </ul>
   </main>
 

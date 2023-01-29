@@ -27,11 +27,12 @@
     "turbo": "^1.7.0"
   },
   "dependencies": {
-    "@astrojs/preact": "^2.0.0",
+    "@astrojs/preact": "^0.2.0",
     "@astrojs/vercel": "^3.0.0",
     "@vercel/node": "^2.8.16",
     "astro": "^2.0.2",
     "preact": "^10.11.3",
+    "sharp": "^0.31.3",
     "vercel": "^28.14.0"
   }
 }

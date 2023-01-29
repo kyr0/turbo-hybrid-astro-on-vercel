@@ -1,6 +1,6 @@
-# client-components
+# preact-components
 
-This package demonstrate how to manage React components on a per-package basis
+This package demonstrate how to manage Preact components on a per-package basis
 and use them in your Astro project.
 
 Always define the dependencies of each package directly per-package.
@@ -11,24 +11,24 @@ Always define the dependencies of each package directly per-package.
 
 ```tsx
 ---
-import { ShowcaseComponent } from "@packages/client-components"
+import { PreactShowcase } from "@packages/preact-components"
 ---
-<ShowcaseComponent text="Using React components from turporepo packages in Astro works">
+<PreactShowcase text="Using preact components from turporepo packages in Astro works">
     Yay
-</ShowcaseComponent>
+</PreactShowcase>
 
 ```
 
 ### From React components
 
 ```tsx
-import { ShowcaseComponent } from '@packages/showcase-react'
+import { ShowcaseComponent } from '@packages/preact-components'
 
 export default function MyReactComponent() {
   return (
-    <ShowcaseComponent text="Using React components from turporepo packages in Astro works">
+    <PreactShowcase text="Using Preact components from turporepo packages in Astro works">
       Yay
-    </ShowcaseComponent>
+    </PreactShowcase>
   )
 }
 ```
