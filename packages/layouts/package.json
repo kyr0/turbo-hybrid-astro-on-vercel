@@ -6,9 +6,6 @@
     "lint": "eslint",
     "format": "format"
   },
-  "dependencies": {
-    "@vercel/analytics": "^0.1.8"
-  },
   "devDependencies": {
     "eslint-config-custom": "*",
     "tsconfig": "*",

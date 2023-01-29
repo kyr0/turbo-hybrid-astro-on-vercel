@@ -49,6 +49,8 @@ export default defineConfig({
     webmanifest({
       name: 'turbo-hybrid-astro-on-vercel',
       icon: '../../public/favicon.svg',
+      start_url: 'https://turbo-hybrid-astro-on-vercel.vercel.app/',
+      display: 'standalone',
     }),
 
     // support for <Image> and <Picture> using sharp for optimization

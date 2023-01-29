@@ -21,7 +21,9 @@ export const prerender = true
       This <a href="https://github.com/kyr0/turbo-hybrid-astro-on-vercel" target="_blank">
         template project</a
       > showcases the power of Astro 2.0's hybrid rendering:
-    </p><ul>
+    </p>
+
+    <ul>
       <li>
         <strong><code>hybrid</code> output</strong> in terms of per page static pre-rendering (SSG) or
         dynamic server-side-rendering (SSR).
@@ -70,6 +72,19 @@ export const prerender = true
         PWA support; generates all necessary icons on-the-fly using <code>sharp</code>
       </li>
       <li>
+        <strong><code>vitest</code></strong> unit testing support via <code>yarn test</code>
+      </li>
+      <li>
+        <strong><code>c8</code></strong> unit test and code coverage analysis via <code
+          >yarn coverage</code
+        >
+      </li>
+      <li>
+        <strong><code>playwright</code></strong> modern front-end testing via <code
+          >yarn playwright</code
+        >
+      </li>
+      <li>
         <strong>
           <code>packages/layouts</code>,
           <code>packages/astro-components</code> and
@@ -84,83 +99,83 @@ export const prerender = true
           >
         </li>
       </li>
-
-      <p>
-        <strong>Great</strong> developer experience (DX) and
-        <strong>extra performance</strong> is unlocked when you use this template as a foundation for
-        your Astro project.
-        <i>Note: Just make sure to set the Vercel root directory to <code>apps/server</code>.</i>
-        See:
-        <a
-          href="https://github.com/kyr0/turbo-hybrid-astro-on-vercel#project-layout"
-          target="_blank"
-          ><code>README.md</code>
-        </a>
-      </p>
-
-      <p>
-        <strong>Please note:</strong> The build output is located at <code
-          >apps/server/.vercel/output/*</code
-        > and is available after you called <code>yarn build</code> for the first time.
-      </p>
-
-      <strong>
-        <a
-          href="https://codesandbox.io/s/github/kyr0/turbo-hybrid-astro-on-vercel/main"
-          target="_blank"
-          >Try on CodeSandbox.io
-        </a>
-      </strong>
-
-      <h2>Performance stats</h2>
-      <p>Collected from this very deployment on Vercel:</p>
-
-      <img
-        class="perf_image"
-        src="/build_speed.png"
-        width="800"
-        height="214"
-        alt="Amazing build speed on Vercel"
-      />
-      <img
-        class="perf_image"
-        src="/desktop_speed.png"
-        width="800"
-        height="698"
-        alt="100% desktop speed in web.dev speed test"
-      />
-      <img
-        class="perf_image"
-        src="/mobile_speed.png"
-        width="800"
-        height="702"
-        alt="100% mobile speed in web.dev speed test"
-      />
-
-      <a
-        href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fturbo-hybrid-astro-on-vercel.vercel.app%2F&hl=EN"
-        >Re-run this test to verify the results</a
-      >
-
-      <p class="instructions">
-        This is the static (SSG) index page in <code>apps/static/src/pages/index.astro</code>.
-      </p>
-
-      <AllLinks />
-
-      <p>
-        Testing <code>@astrojs/image</code>:
-      </p>
-
-      <Image
-        src="https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3071&q=80"
-        width={300}
-        height={200}
-        quality={80}
-        aspectRatio="4:3"
-        alt="Foxes on a meadow"
-      />
     </ul>
+
+    <p>
+      <strong>Great</strong> developer experience (DX) and
+      <strong>extra performance</strong> is unlocked when you use this template as a foundation for your
+      Astro project.
+      <i>Note: Just make sure to set the Vercel root directory to <code>apps/server</code>.</i>
+      See:
+      <a href="https://github.com/kyr0/turbo-hybrid-astro-on-vercel#project-layout" target="_blank"
+        ><code>README.md</code>
+      </a>
+    </p>
+
+    <p>
+      <strong>Please note:</strong> The build output is located at <code
+        >apps/server/.vercel/output/*</code
+      > and is available after you called <code>yarn build</code> for the first time.
+    </p>
+
+    <strong>
+      <a
+        href="https://codesandbox.io/s/github/kyr0/turbo-hybrid-astro-on-vercel/main"
+        target="_blank"
+        >Try on CodeSandbox.io
+      </a>
+    </strong>
+
+    <h2>Performance stats</h2>
+    <p>Collected from this very deployment on Vercel:</p>
+
+    <img
+      class="perf_image"
+      src="/build_speed.png"
+      width="800"
+      height="214"
+      alt="Amazing build speed on Vercel"
+    />
+    <img
+      class="perf_image"
+      src="/desktop_speed.png"
+      width="800"
+      height="698"
+      alt="100% desktop speed in web.dev speed test"
+    />
+    <img
+      class="perf_image"
+      src="/mobile_speed.png"
+      width="800"
+      height="702"
+      alt="100% mobile speed in web.dev speed test"
+    />
+
+    <a
+      href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fturbo-hybrid-astro-on-vercel.vercel.app%2F&hl=EN"
+      >Re-run this test to verify the results</a
+    >
+
+    <p class="instructions">
+      This is the statically prerendered (SSG) index page in <code
+        >apps/server/src/pages/index.astro</code
+      >.
+    </p>
+
+    <AllLinks />
+
+    <p>
+      Testing <code>@astrojs/image</code>:
+    </p>
+
+    <Image
+      src="https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3071&q=80"
+      width={300}
+      height={200}
+      quality={80}
+      aspectRatio="4:3"
+      alt="Foxes on a meadow"
+    />
   </main>
 
   <style>

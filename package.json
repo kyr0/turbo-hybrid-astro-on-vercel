@@ -8,6 +8,9 @@
     "build": "NODE_ENV=production dotenv yarn turbo run build --concurrency=1",
     "preview": "NODE_ENV=production dotenv yarn turbo run preview",
     "dev": "NODE_ENV=development dotenv yarn turbo run dev",
+    "test": "dotenv yarn turbo run test",
+    "coverage": "dotenv yarn turbo run coverage",
+    "playwright": "dotenv yarn turbo run playwright",
     "lint": "dotenv yarn turbo run lint",
     "format": "dotenv yarn turbo run format"
   },
@@ -24,15 +27,7 @@
     "dotenv-cli": "^7.0.0",
     "prettier": "^2.8.3",
     "prettier-plugin-astro": "^0.8.0",
-    "turbo": "^1.7.0"
-  },
-  "dependencies": {
-    "@astrojs/preact": "^0.2.0",
-    "@astrojs/vercel": "^3.0.0",
-    "@vercel/node": "^2.8.16",
-    "astro": "^2.0.2",
-    "preact": "^10.11.3",
     "sharp": "^0.31.3",
-    "vercel": "^28.14.0"
+    "turbo": "^1.7.0"
   }
 }

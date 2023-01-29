@@ -12,7 +12,10 @@
     "build": "astro build",
     "astro": "astro",
     "lint": "eslint",
-    "format": "format"
+    "format": "format",
+    "test": "vitest",
+    "coverage": "vitest --coverage",
+    "playwright": "npx playwright test"
   },
   "dependencies": {
     "@astrojs/preact": "^2.0.0",
@@ -29,8 +32,12 @@
     "vercel": "^28.14.0"
   },
   "devDependencies": {
+    "@vitest/coverage-c8": "^0.28.3",
+    "playwright": "^1.30.0",
+    "@playwright/test": "^1.30.0",
     "eslint-config-custom": "*",
     "format": "*",
-    "tsconfig": "*"
+    "tsconfig": "*",
+    "vitest": "^0.28.3"
   }
 }

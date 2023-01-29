@@ -14,6 +14,21 @@
         "^dev"
       ]
     },
+    "test": {
+      "dependsOn": [
+        "^test"
+      ]
+    },
+    "coverage": {
+      "dependsOn": [
+        "^coverage"
+      ]
+    },
+    "playwright": {
+      "dependsOn": [
+        "^playwright"
+      ]
+    },
     "build": {
       "dependsOn": [
         "^build"

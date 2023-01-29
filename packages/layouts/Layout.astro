@@ -5,6 +5,11 @@ export interface Props {
   lang?: string
 }
 
+const vercelAnalyticsScriptUrl =
+  import.meta.env.MODE === 'development'
+    ? 'https://cdn.vercel-insights.com/v1/script.debug.js'
+    : 'https://cdn.vercel-insights.com/v1/script.js'
+
 const { title, description, lang = 'en' } = Astro.props
 ---
 
@@ -78,12 +83,6 @@ const { title, description, lang = 'en' } = Astro.props
         color: rgb(var(--accent));
       }
     </style>
-    <script>
-      import { inject } from '@vercel/analytics'
-      // @ts-ignore: process.env.NODE_ENV is required by @vercel/analytics internally
-      // so that it can determine the correct path for importing the analytics script
-      globalThis.process = { env: { NODE_ENV: import.meta.env.MODE } }
-      inject()
-    </script>
+    <script async src={vercelAnalyticsScriptUrl}></script>
   </body>
 </html>
