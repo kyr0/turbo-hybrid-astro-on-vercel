@@ -11,10 +11,10 @@ import vercel from '@astrojs/vercel/serverless'
 
 const siteUrl =
   process.env.VERCEL_ENV === 'production'
-    ? 'your.prod.domain.here'
-    : process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}/`
-    : 'https://localhost:3000/'
+    ? process.env.VERCEL_URL // 'your.prod.domain.here'
+    : process.env.VERCEL_URL // default vercel hosting site url
+    ? `https://${process.env.VERCEL_URL}/` // remote CI fallback
+    : 'https://localhost:3000/' // local fallback
 
 // https://astro.build/config
 export default defineConfig({
