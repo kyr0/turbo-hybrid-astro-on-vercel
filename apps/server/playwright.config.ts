@@ -2,7 +2,7 @@ import type { PlaywrightTestConfig } from '@playwright/test'
 
 // see: https://playwright.dev/docs/intro
 const config: PlaywrightTestConfig = {
-  testDir: './src/pages',
+  testDir: './playwright',
   webServer: {
     command: 'yarn dev',
     url: 'http://localhost:3000/',
