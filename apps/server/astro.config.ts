@@ -9,11 +9,18 @@ import image from '@astrojs/image'
 // alternatively, use '@astrojs/vercel/edge'
 import vercel from '@astrojs/vercel/serverless'
 
+const siteUrl =
+  process.env.VERCEL_ENV === 'production'
+    ? 'your.prod.domain.here'
+    : process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}/`
+    : 'https://localhost:3000/'
+
 // https://astro.build/config
 export default defineConfig({
   trailingSlash: 'ignore',
   output: 'server',
-  site: 'http://localhost:3000/',
+  site: siteUrl,
   adapter: vercel(),
   publicDir: '../../public',
   vite: {
@@ -49,7 +56,7 @@ export default defineConfig({
     webmanifest({
       name: 'turbo-hybrid-astro-on-vercel',
       icon: '../../public/favicon.svg',
-      start_url: 'https://turbo-hybrid-astro-on-vercel.vercel.app/',
+      start_url: siteUrl,
       display: 'standalone',
     }),
 

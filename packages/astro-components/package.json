@@ -7,6 +7,9 @@
     "lint": "eslint",
     "format": "format"
   },
+  "dependencies": {
+    "web-vitals": "^3.1.1"
+  },
   "devDependencies": {
     "eslint-config-custom": "*",
     "tsconfig": "*",
